@@ -1,6 +1,6 @@
 # Git Collaboration
 
-## Objectives
+## Learning Objectives
 
 1. Make a new branch for your repository with `git branch`.
 2. Checkout a branch with `git checkout`.
@@ -11,7 +11,7 @@
 7. Merge updated remote branches with `git merge`.
 8. Update and merge remote branches with `git pull`.
 
-## Overview
+## Introduction
 
 A key to collaborating with git is to keep discrete and individual lines of work isolated from each other. Consider the following scenario.
 
@@ -36,7 +36,9 @@ fbee832 Started new-feature (aviflombaum, 2 days ago)
 
 See, we can't push all those commits. Wouldn't it have been great if we simply isolated our work on new-feature into its own copy of our code so that until it's done, we could have deployed the commit that fixes the application? We can do exactly this using a feature in git called branches.
 
-## Making a branch with `git branch`
+## Create and Checkout a New Branch
+
+### Making a branch with `git branch`
 
 Let's quickly make a repository that we can use as a sandbox to experiment with the collaborative features of git. You don't have to follow along, you'll be able to understand the concepts from the reading but if you'd like, you can copy and paste these commands locally.
 
@@ -72,7 +74,7 @@ Right now our git log could be visualized as a timeline composed of two commits.
 
 ![First Two Commits](https://dl.dropboxusercontent.com/s/ikorf1qvvp4tay0/2015-11-02%20at%2011.15%20AM.png)
 
-### About `master` branch.
+### About the `master` branch
 
 Notice that these commits are occurring in a linear sequence of events, almost like a timeline? We call this timeline a branch. Whenever you are working on commits in git, you are adding them on a timeline of code called a branch. The branch you are on by default at the start of any repository, your main timeline, the main branch is called master.
 
@@ -221,7 +223,7 @@ Let's look at our timeline now.
 
 The final step of our `new-feature` work sprint is to figure out how to merge that timeline into the master timeline.
 
-## Merging branches with `git merge`
+## Merging Branches with `git merge`
 
 Our goal is to bring the timeline of commits that occurred on the `new-feature` branch into the `master` so that at the end of the operation, our `master` timeline looks like:
 
@@ -249,7 +251,13 @@ Fast-forward
 
 Now the branches have been merged and if you `ls`, you'll see the `new-feature` file from the `new-feature` branch in your current working directory that is checked out to master.
 
-## Working with remote branches with `git fetch` and `git pull`
+## Working With Remote Branches Using `git fetch` and `git merge` or `git pull`
+
+### What are remotes?
+
+Define remotes here :)
+
+### Using `git fetch` With Remote Branches
 
 Your local branches can attach to remote branches that live on the internet, generally on GitHub, that your team members might contribute to and you can download locally.
 
@@ -282,6 +290,8 @@ When we `fetch` with git, we are asking to copy all changes on the remote to our
 
 Our remote copy on GitHub has a file, `remote-bug-fix`, presumably some code that another developer pushed up to our remote version of the `master` branch to fix a bug. Even after we fetched, our local copy still doesn't appear to have that file.
 
+### Using `git merge` With Remote Branches
+
 After you fetch, you have access to the remote code but you still have to merge it. How do you merge a change fetched from `origin/master` into your current master? From within your local master branch, type: `git merge origin/master`, referring to the branch's full path, `remote/branch`, or `origin/master`.
 
 ```
@@ -310,7 +320,7 @@ When we checkout a remote branch fetched, git will create a local branch to trac
 
 `git fetch` is a pretty low-level git command we don't use that much because it always requires two steps, first `git fetch` and then `git merge` to actually integrate those changes into your working branch. Generally, if you are in `master` you want to immediately `fetch` and `merge` any changes to the remote master.
 
-### Combining `git fetch` with `git merge` by using `git pull`
+### Combining `git fetch` With `git merge` By Using `git pull`
 
 If you want to both fetch and merge, which is what you want to do 99% of the time, just type `git pull`. `git pull` is literally the combination of both `git fetch` and `git merge`.
 
@@ -324,6 +334,14 @@ When you `git pull` the following things will occur:
 Git is complex, and collaborating with people in this matter is just hard - there's no easy way to allow 100s of people to all work on the same code base. These workflows are just being introduced to you.  You'll have lots of time to practice them and memorize what each command does. Don't try to learn it all at once; instead just start to get an understanding of what's what.
 
 ![XKCD Git](http://imgs.xkcd.com/comics/git.png)
+
+## Check for Understanding
+
+Benchmark questions Here
+
+## Summary
+
+List git commands covered with one line descriptions for quick review purposes!
 
 <a href='https://learn.co/lessons/git-collaboration-readme' data-visibility='hidden'>View this lesson on Learn.co</a>
 
