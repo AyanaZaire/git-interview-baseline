@@ -238,15 +238,18 @@ Let's look at our timeline now.
 
 The final step to implement our `new-feature` code is to figure out how to "merge" that timeline into the master timeline.
 
+
 ## Merging Branches with `git merge`
 
-Our goal is to bring the timeline of commits that occurred on the `new-feature` branch into the `master` so that at the end of the operation, our `master` timeline looks like:
+Our goal is to combine the timeline of commits that occurred on the `new-feature` branch with the `master` branch so that our `master` timeline looks like:
 
 ![Merged Timeline](https://dl.dropboxusercontent.com/s/bf0cktf3ag549z2/2015-11-02%20at%201.15%20PM.png)
 
-By merging the timelines, `master` will have all of the commits from the `new-feature` branch as though those events occured on the `master` timeline.
+By merging the timelines, `master` will have all of the commits from the `new-feature` branch as though those events occurred on the `master` timeline.
 
-When we merge a branch with `git merge`, it's important to be currently working on your target branch, the branch you want to move into. The first step for our `new-feature` merge is to checkout `master` because that is where we want the commits to end up.
+![Merging Gif](https://media.giphy.com/media/mW0zaDZZ9aYzS/giphy.gif)
+
+When we merge a branch using `git merge`, it is important to be currently on our "target branch", which is the branch you want to merge into. For example, the first step for our `new-feature` merge is to checkout to `master` because that is where we want the commits to end up.
 
 ```
 mission-critical-application $ git checkout master
@@ -264,7 +267,10 @@ Fast-forward
  create mode 100644 new-feature
 ```
 
-Now the branches have been merged and if you `ls`, you'll see the `new-feature` file from the `new-feature` branch in your current working directory that is checked out to master.
+Now that the branches have been merged, when you type `ls` (list segments) in your terminal you'll see the `new-feature.rb` file from the `new-feature` branch in our current working directory(the `master` branch).
+
+![Merging Gif](https://media.giphy.com/media/mW0zaDZZ9aYzS/giphy.gif)
+
 
 ## Working With Remote Branches Using `git fetch` and `git merge` or `git pull`
 
