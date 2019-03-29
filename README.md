@@ -354,19 +354,46 @@ When you `git pull` the following things will occur:
 1. You will `git fetch` all remote changes, including those on the current branch, existing branches, and new branches.
 2. Any changes that are on a remote branch will be automatically merged, because it is being tracked by your local branch. For example: if you are on `master` and there is a change to `origin/master`, those changes will be automatically merged.
 
+
 ## Conclusion
 
-Git is complex, and collaborating with people in this matter is just hard - there's no easy way to allow 100s of people to all work on the same code base. These workflows are just being introduced to you.  You'll have lots of time to practice them and memorize what each command does. Don't try to learn it all at once; instead just start to get an understanding of what's what.
+Git is complex, and collaborating with people in this matter is just hard - there's no easy way to allow hundreds of people to all work on the same code base. These workflows are just being introduced to you.  You'll have lots of time during pair programming exercises to practice them and memorize what each command does. Don't try to learn it all at once; instead just start to get an understanding of what's what.  
 
 ![XKCD Git](http://imgs.xkcd.com/comics/git.png)
 
+But don't do this! :)
+
+
 ## Check for Understanding
 
-Benchmark questions Here
+At the end of this readme we've summarized the list of commands we introduced for your reference, but before taking a peak at the summary — test yourself and check for understanding. Without referencing the summary, try answering the following questions before moving on.
+
+1. Why do we use GitHub?
+2. What is a branch?
+3. How do we create and checkout into a branch?
+4. How do we make commits with a message?
+5. What are remote GitHub repositories (repos)?
+6. How we update our local copy of the repo with all the remote branches?
+7. How do we merge updated remote branches?
+8. How do we update our local copy of the repo and merge remote branches in one git command?
+
+Treat answering these questions as a benchmark for understanding the GitHub workflow. Happy collaborating!
 
 ## Summary
 
-List git commands covered with one line descriptions for quick review purposes!
+1. `git branch <branch name>`: Make and name a new branch
+2. `git checkout <branch name>`: Checkout a branch
+3. `git checkout -b <branch name>`: Create and checkout a new branch
+4. `git commit -m "Your message here"`: Create commits with a message within a branch
+5. `git merge <branch name>`: Merge branches from master
+6. `git fetch`: Update branches from remotes
+7. `git merge <remote name>/<branch name>`: Merge updated remote branches
+8. `git pull`: Update and merge remote branches
+
+
+### Resource
+
+* [Understanding the GitHub flow](https://guides.github.com/introduction/flow/)
 
 <a href='https://learn.co/lessons/git-collaboration-readme' data-visibility='hidden'>View this lesson on Learn.co</a>
 
